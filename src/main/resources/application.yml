@@ -1,0 +1,44 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/TradeFlow
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://token.actions.githubusercontent.com
+
+jwt:
+  secret: mybesttimepursuedevcareerinbigtechs
+
+  #security:
+  #  user:
+ #     name: tradeUser
+ #     password: trade
+ #   oauth2:
+ #     client:
+ #       registration:
+ #$         auth0:
+ #           client-id: dfLUI4dY2VfD1wxiri7DUVTtDhMoclSK
+ #           client-secret: MRLiorcrdYkBHGrHx2yC2zZP2N86XIcCKMdmL3aRyDOHnKS5S-VkLX0f1sCL2oNX
+  #          scope: openid profile email
+ #           redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+  #          client-name: Auth0
+ #           authorization-grant-type: authorization_code
+  #          provider: auth0
+ #     provider:
+  #$      auth0:
+ #$         issuer-uri: https://dev-22i01vp2btbppoba.us.auth0.com/api/v2/
+
